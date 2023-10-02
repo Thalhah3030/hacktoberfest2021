@@ -5,7 +5,19 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
+"""
+    Connects to an Instagram API or backup API for retrieving user information.
 
+    Args:
+        api (str): The API to use, either 'TARGET_API' or 'BACKUP_API'.
+        username (str): The Instagram username for which to retrieve information.
+
+    Returns:
+        str: The URL of the API endpoint for the specified username.
+
+    Raises:
+        ValueError: If an unsupported API is provided.
+    """
 def connect_to_api(api, username):
     """Connection Handler"""
     TARGET_API = f"https://www.instadp.com/fullsize/{username}"
