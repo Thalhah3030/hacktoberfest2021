@@ -30,6 +30,19 @@ def instagram():
 
     print(f"Connected! - Total Posts Found : {len(posts)}\n")
 
+    """
+Description: This Python script iterates through a list of 'posts' and extracts
+the 'shortcode' from each post to generate Instagram post URLs. It also calculates
+the total time taken for the operation and prompts the user to press Enter to exit.
+
+- It iterates through the 'posts' list, extracting the 'shortcode' and constructing
+  Instagram post URLs for each post.
+  
+- It records the start and end times to calculate the total execution time.
+
+- It prints a completion message along with the total time taken.
+"""
+
     for post in posts:
         source = post['node']['shortcode']
         print(f'https://www.instagram.com/p/{source}')
